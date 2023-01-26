@@ -93,7 +93,7 @@ $ make
 Instances contained in folder `data` are part of the so-called "Uchoa dataset".
 We refer to the following paper for further information on their generation and characteristics:
 
-```
+```bib
 @article{uchoa_2017,
     title={New benchmark instances for the capacitated vehicle routing problem},
     author={Uchoa, Eduardo and Pecin, Diego and Pessoa, Artur and Poggi, Marcus and Vidal, Thibaut and Subramanian, Anand},
