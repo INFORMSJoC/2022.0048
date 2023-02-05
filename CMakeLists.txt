@@ -14,136 +14,136 @@ add_compile_options("$<$<CONFIG:DEBUG>:${DEBUG_OPTIONS}>")
 add_compile_options("$<$<AND:$<CONFIG:DEBUG>,$<CXX_COMPILER_ID:GNU>>:${GDB_DEBUG_OPTIONS}>")
 add_compile_definitions("$<$<AND:$<CONFIG:DEBUG>,$<CXX_COMPILER_ID:GNU>>:${GCC_DEBUG_DEFINES}>")
 
-add_library(srp
-        src/alns/SRP-Utils/ArgParser.h
-        src/alns/SRP-Utils/Coordinate.h
-        src/alns/SRP-Utils/GraphObjects.h
-        src/alns/SRP-Utils/HashNumberGenerator.h
-        src/alns/SRP-Utils/LimIntSet.h
-        src/alns/SRP-Utils/Matrix.h
-        src/alns/SRP-Utils/NSMatrix.h
-        src/alns/SRP-Utils/ParFileParser.h
-        src/alns/SRP-Utils/StatUtils.h
-        src/alns/SRP-Utils/Utils.h
-        src/alns/SRP-Utils/VectorUtils.h
-        src/alns/SRP-Utils/ArgParser.cpp
-        src/alns/SRP-Utils/GraphObjects.cpp
-        src/alns/SRP-Utils/HashNumberGenerator.cpp
-        src/alns/SRP-Utils/ParFileParser.cpp
-        src/alns/SRP-Utils/Utils.cpp
-        src/alns/SRP-Utils/VectorUtils.cpp)
+# add_library(srp
+#         src/alns/SRP-Utils/ArgParser.h
+#         src/alns/SRP-Utils/Coordinate.h
+#         src/alns/SRP-Utils/GraphObjects.h
+#         src/alns/SRP-Utils/HashNumberGenerator.h
+#         src/alns/SRP-Utils/LimIntSet.h
+#         src/alns/SRP-Utils/Matrix.h
+#         src/alns/SRP-Utils/NSMatrix.h
+#         src/alns/SRP-Utils/ParFileParser.h
+#         src/alns/SRP-Utils/StatUtils.h
+#         src/alns/SRP-Utils/Utils.h
+#         src/alns/SRP-Utils/VectorUtils.h
+#         src/alns/SRP-Utils/ArgParser.cpp
+#         src/alns/SRP-Utils/GraphObjects.cpp
+#         src/alns/SRP-Utils/HashNumberGenerator.cpp
+#         src/alns/SRP-Utils/ParFileParser.cpp
+#         src/alns/SRP-Utils/Utils.cpp
+#         src/alns/SRP-Utils/VectorUtils.cpp)
 
-target_compile_features(    srp PUBLIC cxx_std_17)
-target_link_libraries(      srp PUBLIC ${LINKER_OPTIONS})
-target_link_libraries(      srp PUBLIC dl)
-target_compile_options(     srp PRIVATE
-        -Wno-misleading-indentation
-        -Wno-sign-compare
-        -Wno-unused-parameter
-        -Wno-unused-variable
-        -Wno-parentheses
-        -Wno-reorder
-        -Wno-unused-but-set-variable
-        -Wno-maybe-uninitialized
-        -Wno-deprecated-copy)
+# target_compile_features(    srp PUBLIC cxx_std_17)
+# target_link_libraries(      srp PUBLIC ${LINKER_OPTIONS})
+# target_link_libraries(      srp PUBLIC dl)
+# target_compile_options(     srp PRIVATE
+#         -Wno-misleading-indentation
+#         -Wno-sign-compare
+#         -Wno-unused-parameter
+#         -Wno-unused-variable
+#         -Wno-parentheses
+#         -Wno-reorder
+#         -Wno-unused-but-set-variable
+#         -Wno-maybe-uninitialized
+#         -Wno-deprecated-copy)
 
-add_library(palns
-        src/alns/PALNS/PALNS.h
-        src/alns/PALNS/PALNS.cpp
-        src/alns/PALNS/PALNSAcceptanceCriterion.h
-        src/alns/PALNS/PALNSHelpers.h
-        src/alns/PALNS/PALNSParameters.h
-        src/alns/PALNS/PALNSParameters.cpp
-        src/alns/PALNS/AcceptanceCriteria/RecordDeviation.h
-        src/alns/PALNS/AcceptanceCriteria/RecordDeviation.cpp
-        src/alns/PALNS/PALNSDecompositionMethod.h
-        src/alns/PALNS/DecompositionMethods/RouteSequenceDecomposition.h
-        src/alns/PALNS/DecompositionMethods/RouteSequence/RandomRouteDecomposition.h
-        src/alns/PALNS/SubProblem.h
-        src/alns/PALNS/SubProblem.cpp
-        src/alns/PALNS/PALNSDecompositionMethod.cpp
-        src/alns/PALNS/DecompositionMethods/RouteSequenceDecomposition.cpp
-        src/alns/PALNS/DecompositionMethods/RouteSequence/RandomRouteDecomposition.cpp
-        src/alns/PALNS/DecompositionMethods/RouteSequence/BarycentreSwipeDecomposition.cpp
-        src/alns/PALNS/DecompositionMethods/RouteSequence/BarycentreSwipeDecomposition.h
-        src/alns/PALNS/DecompositionMethods/RouteSequence/BarycentreQuadrantDecomposition.cpp
-        src/alns/PALNS/DecompositionMethods/RouteSequence/BarycentreQuadrantDecomposition.h
-        src/alns/PALNS/DecompositionMethods/RouteSequence/BarycentreClusteringDecomposition.cpp
-        src/alns/PALNS/DecompositionMethods/RouteSequence/BarycentreClusteringDecomposition.h
-        src/alns/PALNS/DecompositionMethods/RouteSequence/RouteHistoryDecomposition.cpp
-        src/alns/PALNS/DecompositionMethods/RouteSequence/RouteHistoryDecomposition.h
-        src/alns/PALNS/DecompositionMethods/ArcBasedDecomposition.cpp
-        src/alns/PALNS/DecompositionMethods/ArcBasedDecomposition.h
-        src/alns/PALNS/DecompositionMethods/ArcBased/RandomArcDecomposition.h
-        src/alns/PALNS/DecompositionMethods/ArcBased/RandomArcDecomposition.cpp
-        src/alns/PALNS/DecompositionMethods/ArcBased/RandomPathDecomposition.h
-        src/alns/PALNS/DecompositionMethods/ArcBased/RandomPathDecomposition.cpp
-        src/alns/PALNS/DecompositionMethods/ArcBased/CostArcDecomposition.cpp
-        src/alns/PALNS/DecompositionMethods/ArcBased/CostArcDecomposition.h
-        src/alns/PALNS/DecompositionMethods/ArcBased/CostPathDecomposition.cpp
-        src/alns/PALNS/DecompositionMethods/ArcBased/CostPathDecomposition.h
-        src/alns/PALNS/DecompositionMethods/ArcBased/ArcHistoryDecomposition.cpp
-        src/alns/PALNS/DecompositionMethods/ArcBased/ArcHistoryDecomposition.h
-        src/alns/PALNS/DecompositionMethods/ArcBased/PathHistoryDecomposition.cpp
-        src/alns/PALNS/DecompositionMethods/ArcBased/PathHistoryDecomposition.h)
+# add_library(palns
+#         src/alns/PALNS/PALNS.h
+#         src/alns/PALNS/PALNS.cpp
+#         src/alns/PALNS/PALNSAcceptanceCriterion.h
+#         src/alns/PALNS/PALNSHelpers.h
+#         src/alns/PALNS/PALNSParameters.h
+#         src/alns/PALNS/PALNSParameters.cpp
+#         src/alns/PALNS/AcceptanceCriteria/RecordDeviation.h
+#         src/alns/PALNS/AcceptanceCriteria/RecordDeviation.cpp
+#         src/alns/PALNS/PALNSDecompositionMethod.h
+#         src/alns/PALNS/DecompositionMethods/RouteSequenceDecomposition.h
+#         src/alns/PALNS/DecompositionMethods/RouteSequence/RandomRouteDecomposition.h
+#         src/alns/PALNS/SubProblem.h
+#         src/alns/PALNS/SubProblem.cpp
+#         src/alns/PALNS/PALNSDecompositionMethod.cpp
+#         src/alns/PALNS/DecompositionMethods/RouteSequenceDecomposition.cpp
+#         src/alns/PALNS/DecompositionMethods/RouteSequence/RandomRouteDecomposition.cpp
+#         src/alns/PALNS/DecompositionMethods/RouteSequence/BarycentreSwipeDecomposition.cpp
+#         src/alns/PALNS/DecompositionMethods/RouteSequence/BarycentreSwipeDecomposition.h
+#         src/alns/PALNS/DecompositionMethods/RouteSequence/BarycentreQuadrantDecomposition.cpp
+#         src/alns/PALNS/DecompositionMethods/RouteSequence/BarycentreQuadrantDecomposition.h
+#         src/alns/PALNS/DecompositionMethods/RouteSequence/BarycentreClusteringDecomposition.cpp
+#         src/alns/PALNS/DecompositionMethods/RouteSequence/BarycentreClusteringDecomposition.h
+#         src/alns/PALNS/DecompositionMethods/RouteSequence/RouteHistoryDecomposition.cpp
+#         src/alns/PALNS/DecompositionMethods/RouteSequence/RouteHistoryDecomposition.h
+#         src/alns/PALNS/DecompositionMethods/ArcBasedDecomposition.cpp
+#         src/alns/PALNS/DecompositionMethods/ArcBasedDecomposition.h
+#         src/alns/PALNS/DecompositionMethods/ArcBased/RandomArcDecomposition.h
+#         src/alns/PALNS/DecompositionMethods/ArcBased/RandomArcDecomposition.cpp
+#         src/alns/PALNS/DecompositionMethods/ArcBased/RandomPathDecomposition.h
+#         src/alns/PALNS/DecompositionMethods/ArcBased/RandomPathDecomposition.cpp
+#         src/alns/PALNS/DecompositionMethods/ArcBased/CostArcDecomposition.cpp
+#         src/alns/PALNS/DecompositionMethods/ArcBased/CostArcDecomposition.h
+#         src/alns/PALNS/DecompositionMethods/ArcBased/CostPathDecomposition.cpp
+#         src/alns/PALNS/DecompositionMethods/ArcBased/CostPathDecomposition.h
+#         src/alns/PALNS/DecompositionMethods/ArcBased/ArcHistoryDecomposition.cpp
+#         src/alns/PALNS/DecompositionMethods/ArcBased/ArcHistoryDecomposition.h
+#         src/alns/PALNS/DecompositionMethods/ArcBased/PathHistoryDecomposition.cpp
+#         src/alns/PALNS/DecompositionMethods/ArcBased/PathHistoryDecomposition.h)
 
-target_compile_features(    palns PUBLIC cxx_std_17)
-target_link_libraries(      palns PUBLIC ${LINKER_OPTIONS})
-target_link_libraries(      palns PUBLIC srp)
-target_include_directories( palns PUBLIC src/alns/SRP-Utils)
-target_compile_options(     palns PRIVATE
-        -Wno-misleading-indentation
-        -Wno-reorder
-        -Wno-sign-compare
-        -Wno-unused-parameter)
+# target_compile_features(    palns PUBLIC cxx_std_17)
+# target_link_libraries(      palns PUBLIC ${LINKER_OPTIONS})
+# target_link_libraries(      palns PUBLIC srp)
+# target_include_directories( palns PUBLIC src/alns/SRP-Utils)
+# target_compile_options(     palns PRIVATE
+#         -Wno-misleading-indentation
+#         -Wno-reorder
+#         -Wno-sign-compare
+#         -Wno-unused-parameter)
 
-add_executable(palns-cvrp
-        src/alns/PALNS-CVRP/ArcCostTracker.h
-        src/alns/PALNS-CVRP/CVRPInstance.h
-        src/alns/PALNS-CVRP/CVRPSolution.h
-        src/alns/PALNS-CVRP/CVRPUtils.h
-        src/alns/PALNS-CVRP/DestroyMethods.h
-        src/alns/PALNS-CVRP/GreedySeqAlg.h
-        src/alns/PALNS-CVRP/IncrementalTSP.h
-        src/alns/PALNS-CVRP/InsertionCache.h
-        src/alns/PALNS-CVRP/PALNS-CVRP.h
-        src/alns/PALNS-CVRP/PetalAlg.h
-        src/alns/PALNS-CVRP/Regret2Alg.h
-        src/alns/PALNS-CVRP/RepairMethods.h
-        src/alns/PALNS-CVRP/Route.h
-        src/alns/PALNS-CVRP/SeedAlg.h
-        src/alns/PALNS-CVRP/SeqInsertionCache.h
-        src/alns/PALNS-CVRP/SeqRegret2Alg.h
-        src/alns/PALNS-CVRP/ArcCostTracker.cpp
-        src/alns/PALNS-CVRP/CVRPInstance.cpp
-        src/alns/PALNS-CVRP/CVRPSolution.cpp
-        src/alns/PALNS-CVRP/DestroyMethods.cpp
-        src/alns/PALNS-CVRP/GreedySeqAlg.cpp
-        src/alns/PALNS-CVRP/InsertionCache.cpp
-        src/alns/PALNS-CVRP/main.cpp
-        src/alns/PALNS-CVRP/PALNS-CVRP.cpp
-        src/alns/PALNS-CVRP/Regret2Alg.cpp
-        src/alns/PALNS-CVRP/RepairMethods.cpp
-        src/alns/PALNS-CVRP/Route.cpp
-        src/alns/PALNS-CVRP/SeedAlg.cpp
-        src/alns/PALNS-CVRP/SeqInsertionCache.cpp
-        src/alns/PALNS-CVRP/SeqRegret2Alg.cpp)
+# add_executable(palns-cvrp
+#         src/alns/PALNS-CVRP/ArcCostTracker.h
+#         src/alns/PALNS-CVRP/CVRPInstance.h
+#         src/alns/PALNS-CVRP/CVRPSolution.h
+#         src/alns/PALNS-CVRP/CVRPUtils.h
+#         src/alns/PALNS-CVRP/DestroyMethods.h
+#         src/alns/PALNS-CVRP/GreedySeqAlg.h
+#         src/alns/PALNS-CVRP/IncrementalTSP.h
+#         src/alns/PALNS-CVRP/InsertionCache.h
+#         src/alns/PALNS-CVRP/PALNS-CVRP.h
+#         src/alns/PALNS-CVRP/PetalAlg.h
+#         src/alns/PALNS-CVRP/Regret2Alg.h
+#         src/alns/PALNS-CVRP/RepairMethods.h
+#         src/alns/PALNS-CVRP/Route.h
+#         src/alns/PALNS-CVRP/SeedAlg.h
+#         src/alns/PALNS-CVRP/SeqInsertionCache.h
+#         src/alns/PALNS-CVRP/SeqRegret2Alg.h
+#         src/alns/PALNS-CVRP/ArcCostTracker.cpp
+#         src/alns/PALNS-CVRP/CVRPInstance.cpp
+#         src/alns/PALNS-CVRP/CVRPSolution.cpp
+#         src/alns/PALNS-CVRP/DestroyMethods.cpp
+#         src/alns/PALNS-CVRP/GreedySeqAlg.cpp
+#         src/alns/PALNS-CVRP/InsertionCache.cpp
+#         src/alns/PALNS-CVRP/main.cpp
+#         src/alns/PALNS-CVRP/PALNS-CVRP.cpp
+#         src/alns/PALNS-CVRP/Regret2Alg.cpp
+#         src/alns/PALNS-CVRP/RepairMethods.cpp
+#         src/alns/PALNS-CVRP/Route.cpp
+#         src/alns/PALNS-CVRP/SeedAlg.cpp
+#         src/alns/PALNS-CVRP/SeqInsertionCache.cpp
+#         src/alns/PALNS-CVRP/SeqRegret2Alg.cpp)
 
-target_compile_features(    palns-cvrp PRIVATE cxx_std_17)
-target_link_libraries(      palns-cvrp PRIVATE ${LINKER_OPTIONS})
-target_link_libraries(      palns-cvrp PRIVATE palns)
-target_include_directories( palns-cvrp PRIVATE src/alns/PALNS)
-target_compile_options(     palns-cvrp PRIVATE
-        -Wno-misleading-indentation
-        -Wno-reorder
-        -Wno-unused-parameter
-        -Wno-sign-compare
-        -Wno-unused-variable
-        -Wno-maybe-uninitialized
-        -Wno-comment
-        -Wno-unused-but-set-variable
-        -Wno-delete-non-virtual-dtor
-        -Wno-deprecated-copy)
+# target_compile_features(    palns-cvrp PRIVATE cxx_std_17)
+# target_link_libraries(      palns-cvrp PRIVATE ${LINKER_OPTIONS})
+# target_link_libraries(      palns-cvrp PRIVATE palns)
+# target_include_directories( palns-cvrp PRIVATE src/alns/PALNS)
+# target_compile_options(     palns-cvrp PRIVATE
+#         -Wno-misleading-indentation
+#         -Wno-reorder
+#         -Wno-unused-parameter
+#         -Wno-sign-compare
+#         -Wno-unused-variable
+#         -Wno-maybe-uninitialized
+#         -Wno-comment
+#         -Wno-unused-but-set-variable
+#         -Wno-delete-non-virtual-dtor
+#         -Wno-deprecated-copy)
 
 add_executable(hgs
         src/hgs-TV/CommandLineParser.h
@@ -207,6 +207,6 @@ target_compile_options(     hgs PRIVATE
 option(BATCH_MODE "Suppress printing to stdout, for running experiments on clusters." OFF)
 if(BATCH_MODE)
     target_compile_definitions(hgs PRIVATE BATCH_MODE)
-    target_compile_definitions(palns PRIVATE BATCH_MODE)
-    target_compile_definitions(palns-cvrp PRIVATE BATCH_MODE)
+#     target_compile_definitions(palns PRIVATE BATCH_MODE)
+#     target_compile_definitions(palns-cvrp PRIVATE BATCH_MODE)
 endif()

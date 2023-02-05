@@ -41,7 +41,6 @@ You can cite the development repository [cvrp-decomposition](https://github.com/
 ## Authors
 
 The original ALNS code is by Stefan Ropke.
-Stefan wrote most of the code contained in directory `src/alns`.
 Alberto Santini then edited Stefan's code and implemented instance decomposition.
 The original paper in which Stefan introduced ALNS is the following:
 
@@ -75,8 +74,10 @@ Alberto Santini then edited Thibaut's code and implemented instance decompositio
 
 ## Usage
 
-The preferred way to build the two programmes (one for ALNS and one for HGS) is trhough cmake.
-We provide a `CMakeList.txt` file, which allows to build the executables as follows:
+### HGS
+
+The preferred way to build the HGS programme is trhough cmake.
+We provide a `CMakeList.txt` file, which allows to build the executable as follows:
 
 ```
 $ git clone https://github.com:alberto-santini/cvrp-decomposition.git
@@ -86,6 +87,30 @@ $ cd build
 $ cmake -DCMAKE_BUILD_TYPE=Release ..
 $ cmake
 $ make
+```
+
+### ALNS
+
+The ALNS solver is distributed in binary form in folder `bin`.
+The executable (for Linux x86-64) is `palns-cvrp`.
+Running the executable file without any parameter displays the available parameters:
+
+```
+-f <arg>    : Load problem given by <arg>
+-t <arg>    : problem type to load: 
+              1 = JFC CVRP (default)
+              2 = GWKC
+              3 = TSPLIB format (used by exact algs.)
+              4 = Tailard
+              5 = TSPLIB format, but #vehicles is free (for Uchoa et al. instances)
+-p <arg>    : Use parameter file given by <arg>
+-P <arg>    : override parameters from par file with <arg>
+-n <arg>    : number of threads to use.
+-v <arg>	: Number of vehicles (for type 3 instances)
+-r <arg>	: Number of retries
+-h          : This help
+-H          : Add header line to output file
+-o <arg>    : prefix of summary files
 ```
 
 ## Instances
