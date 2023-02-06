@@ -29,7 +29,8 @@ We propose several decomposition techniques, which we describe in detail in our 
 
 You can cite the development repository [cvrp-decomposition](https://github.com/alberto-santini/cvrp-decomposition) through Zenodo:
 
-
+## Cite
+[![DOI](https://zenodo.org/badge/593264236.svg)](https://zenodo.org/badge/latestdoi/593264236)
 ```bib
 @article{cvrp_decomposition_2022,
     title={{Repository cvrp-decomposition}} Version v2022.0048},
