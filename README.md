@@ -2,7 +2,7 @@
 
 # Decomposition Strategies for Vehicle Routing Heuristics
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6097671.svg)](https://doi.org/10.5281/zenodo.6097671)
+
 
 This archive is distributed in association with the [INFORMS Journal on Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
