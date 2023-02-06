@@ -76,7 +76,7 @@ Alberto Santini then edited Thibaut's code and implemented instance decompositio
 
 ### HGS
 
-The preferred way to build the HGS programme is trhough cmake.
+The preferred way to build the HGS programme is through cmake.
 We provide a `CMakeList.txt` file, which allows to build the executable as follows:
 
 ```
