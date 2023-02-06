@@ -31,7 +31,7 @@ You can cite this repository via Zenodo:
 [![DOI](https://zenodo.org/badge/593264236.svg)](https://zenodo.org/badge/latestdoi/593264236)
 ```bib
 @article{cvrp_decomposition_2022,
-    title={{Repository cvrp-decomposition}} Version v2022.0048},
+    title={{Repository cvrp-decomposition} Version v2022.0048},
     author={Ropke, Stefan and Vidal, Thibaut and Santini, Alberto},
     year=2022,
     doi={10.5281/zenodo.7613129},
