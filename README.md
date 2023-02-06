@@ -2,8 +2,6 @@
 
 # Decomposition Strategies for Vehicle Routing Heuristics
 
-
-
 This archive is distributed in association with the [INFORMS Journal on Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
 The software and data in this repository are a snapshot of the software and data used in the paper [Decomposition Strategies for Vehicle Routing Heuristics](https://doi.org/10.1287/ijoc.2022.0048) by A. Santini, M. Schneider, T. Vidal, and D. Vigo.
@@ -15,8 +13,8 @@ This repository presents a proof-of-concept for including instance decomposition
 * The Hybrid Genetic Algorithm of Thibaut Vidal
 
 We propose several decomposition techniques, which we describe in detail in our paper:
-## Cite
 
+## Cite
 ```bib
 @article{cvrp_decomposition,
     title={Decomposition strategies for vehicle routing heuristics},
@@ -27,7 +25,7 @@ We propose several decomposition techniques, which we describe in detail in our 
 }
 ```
 
-You can cite the development repository [cvrp-decomposition](https://github.com/alberto-santini/cvrp-decomposition) through Zenodo:
+You can cite this repository via Zenodo:
 
 ## Cite
 [![DOI](https://zenodo.org/badge/593264236.svg)](https://zenodo.org/badge/latestdoi/593264236)
@@ -37,7 +35,6 @@ You can cite the development repository [cvrp-decomposition](https://github.com/
     author={Ropke, Stefan and Vidal, Thibaut and Santini, Alberto},
     year=2022,
     doi={10.5281/zenodo.7613129},
-    [![DOI](https://zenodo.org/badge/593264236.svg)](https://zenodo.org/badge/latestdoi/593264236)
     url={https://github.com/INFORMSJoC/2022.0048}
 }
 ```
