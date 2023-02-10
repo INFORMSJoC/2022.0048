@@ -14,7 +14,7 @@ This repository presents a proof-of-concept for including instance decomposition
 
 We propose several decomposition techniques, which we describe in detail in our paper:
 
-## Cite
+### Cite
 ```bib
 @article{cvrp_decomposition,
     title={Decomposition strategies for vehicle routing heuristics},
@@ -27,7 +27,7 @@ We propose several decomposition techniques, which we describe in detail in our 
 
 You can cite this repository via Zenodo:
 
-## Cite
+### Cite
 [![DOI](https://zenodo.org/badge/593264236.svg)](https://zenodo.org/badge/latestdoi/593264236)
 ```bib
 @article{cvrp_decomposition_2022,
