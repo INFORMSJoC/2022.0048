@@ -4,7 +4,7 @@
 
 This archive is distributed in association with the [INFORMS Journal on Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
-The software and data in this repository are a snapshot of the software and data used in the paper [Decomposition Strategies for Vehicle Routing Heuristics](https://doi.org/10.1287/ijoc.2022.0048) by A. Santini, M. Schneider, T. Vidal, and D. Vigo.
+The software and data in this repository are a snapshot of the software and data used in the paper [Decomposition Strategies for Vehicle Routing Heuristics](https://doi.org/10.1287/ijoc.2023.1288) by A. Santini, M. Schneider, T. Vidal, and D. Vigo.
 The snapshot is based on [alberto-santini/cvrp-decomposition v0.1](https://github.com/alberto-santini/cvrp-decomposition/releases/tag/0.1) in the development repository. 
 Users are advised to use [cvrp-decomposition](https://github.com/alberto-santini/cvrp-decomposition), which might contain improvements and fixes compared to this repository.
 
