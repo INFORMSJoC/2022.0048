@@ -1,4 +1,4 @@
-[![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
+[![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://doi.org/10.1287/ijoc.2023.1288)
 
 # Decomposition Strategies for Vehicle Routing Heuristics
 
