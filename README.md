@@ -28,13 +28,13 @@ We propose several decomposition techniques, which we describe in detail in our 
 You can cite this repository via Zenodo:
 
 ### Cite
-[![DOI](https://zenodo.org/badge/593264236.svg)](https://zenodo.org/badge/latestdoi/593264236)
+DOI: [10.1287/ijoc.2023.1288.cd](https://doi.org/10.1287/ijoc.2023.1288.cd)
 ```bib
 @article{cvrp_decomposition_2022,
     title={{Repository cvrp-decomposition} Version v2022.0048},
     author={Ropke, Stefan and Vidal, Thibaut and Santini, Alberto},
     year=2022,
-    doi={10.5281/zenodo.7613129},
+    doi={10.1287/ijoc.2023.1288.cd},
     url={https://github.com/INFORMSJoC/2022.0048}
 }
 ```
