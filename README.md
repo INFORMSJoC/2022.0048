@@ -25,7 +25,7 @@ We propose several decomposition techniques, which we describe in detail in our 
 }
 ```
 
-You can cite this repository via Zenodo:
+You can cite this repository via GitHub:
 
 ### Cite
 DOI: [10.1287/ijoc.2023.1288.cd](https://doi.org/10.1287/ijoc.2023.1288.cd)
